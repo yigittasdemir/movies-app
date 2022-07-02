@@ -1,0 +1,427 @@
+@import 'media-queries';
+*{
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+    opacity: 0
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #000000;
+    header{
+        position: absolute;
+        z-index: 99;
+        border-bottom: 0.5px solid rgb(119, 119, 119);
+        width: 100%;
+        background-color: #000000;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0px 0px;
+            padding: 20px 0px;
+            @include tablet_two{
+                display: none;
+            }
+            @include tablet{
+                display: none;
+            }
+            li{
+                margin: 10px 5px;
+                border-radius: 10px;
+                cursor: pointer;
+                background-color: #fff;
+                padding: 10px 15px;
+                &:hover{
+                    background-color: rgb(235, 235, 235);
+                }
+                a{
+                    color: black;
+                }
+            }
+        }
+        .icon{
+            display: none;
+            color: #fff;
+            font-size: 30px;
+            padding: 30px;
+            @include tablet_two{
+                display: block;
+            }
+            @include tablet{
+                display: block;
+            }
+        }
+        #toggle-menu{
+            display: none;
+            width: 100%;
+            height: 520px;
+            overflow-x: hidden;
+            background-color: #000000;
+            ul{
+                display: flex;
+                padding: 30px 0px;
+                justify-content: center;
+                li{
+                    width: 150px;
+                    margin: 10px 30px;
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .vizyondakiler-container{
+        position: absolute;
+        width: 100%;
+        margin: 150px 0px;
+        h1{
+            text-align: center;
+            margin: 40px 0px;
+            color: #fff;
+            @include tablet{
+                text-align: left;
+                margin: 0px 65px;
+            }
+            @include mobile{
+                text-align: left;
+                margin: 0px 28px;
+                font-size: 28px;
+            }
+            @include mobile_two{
+                text-align: left;
+                margin: 0px 30px;
+                font-size: 25px;
+            }
+        }
+        .vizyondakiler{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: center;
+            @include mobile{
+                flex-wrap: nowrap;
+                overflow-y: hidden;
+                justify-content: left;
+                margin: 0px 0px;
+            }
+            .card{
+                background-color: rgba(255, 255, 255, 0.63);
+                margin: 20px 30px;
+                border-radius: 10px;
+                width: 200px;
+                text-align: center;
+                @include pc_two{
+                    margin: 20px 10px;
+                }
+                .info{
+                    padding: 15px 5px;
+                    line-height: 40px;
+                    @include mobile{
+                        padding: 15px 10px;
+                    }
+                    img{
+                        width: 130px;
+                        height: 170px;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+                    h2{
+                        font-size: 20px;
+                        color: #fff;
+                    }
+                    button{
+                        padding: 5px 15px;
+                        cursor: pointer;
+                        background-color: #fff;
+                        border: 1px solid rgb(255, 255, 255);
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .populars-container{
+        position: absolute;
+        width: 100%;
+        margin: 1100px 0px;
+        @include pc_two{
+            margin: 1400px 0px;
+        }
+        @include tablet{
+            margin: 1400px 0px;
+        }
+        @include mobile{
+            margin: 700px 0px;
+        }
+        h1{
+            text-align: center;
+            margin: 40px 0px;
+            color: #fff;
+            @include tablet{
+                text-align: left;
+                margin: 0px 65px;
+            }
+            @include mobile{
+                margin: 0px 28px;
+                font-size: 28px;
+            }
+            @include mobile_two{
+                text-align: left;
+                margin: 0px 30px;
+                font-size: 25px;
+            }
+        }
+        .populars{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: center;
+            @include mobile{
+                flex-wrap: nowrap;
+                overflow-y: hidden;
+                justify-content: left;
+                margin: 0px 0px;
+            }
+            .card{
+                background-color: rgba(255, 255, 255, 0.63);
+                margin: 20px 30px;
+                border-radius: 10px;
+                width: 200px;
+                text-align: center;
+                @include pc_two{
+                    margin: 20px 10px;
+                }
+                .info{
+                    padding: 15px 5px;
+                    line-height: 40px;
+                    @include mobile{
+                        padding: 15px 10px;
+                    }
+                    img{
+                        width: 130px;
+                        object-fit: cover;
+                        height: 170px;
+                        border-radius: 10px;
+                    }
+                    h2{
+                        font-size: 20px;
+                        color: #fff;
+                    }
+                    button{
+                        padding: 5px 15px;
+                        cursor: pointer;
+                        background-color: #fff;
+                        border: 1px solid rgb(255, 255, 255);
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .most-like-container{
+        position: absolute;
+        width: 100%;
+        margin: 2050px 0px;
+        @include pc_two{
+            margin: 2250px 0px;
+        }
+        @include tablet_two{
+            margin: 2350px 0px;
+        }
+        @include tablet{
+            margin: 2350px 0px;
+        }
+        @include mobile{
+            margin: 1300px 0px;
+        }
+        h1{
+            text-align: center;
+            margin: 40px 0px;
+            color: #fff;
+            @include tablet{
+                text-align: left;
+                margin: 0px 65px;
+            }
+            @include mobile{
+                margin: 0px 28px;
+                font-size: 28px;
+            }
+            @include mobile_two{
+                text-align: left;
+                margin: 0px 30px;
+                font-size: 25px;
+            }
+        }
+        .most-like{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: center;
+            @include mobile{
+                flex-wrap: nowrap;
+                overflow-y: hidden;
+                justify-content: left;
+                margin: 0px 0px;
+            }
+            .card{
+                background-color: rgba(255, 255, 255, 0.63);
+                margin: 20px 20px;
+                border-radius: 10px;
+                width: 200px;
+                text-align: center;
+                @include pc_two{
+                    margin: 20px 10px;
+                }
+                .info{
+                    padding: 15px 5px;
+                    line-height: 40px;
+                    @include mobile{
+                        padding: 15px 10px;
+                    }
+                    img{
+                        width: 130px;
+                        object-fit: cover;
+                        height: 170px;
+                        border-radius: 10px;
+                    }
+                    h2{
+                        font-size: 20px;
+                        color: #fff;
+                    }
+                    button{
+                        padding: 5px 15px;
+                        cursor: pointer;
+                        background-color: #fff;
+                        border: 1px solid rgb(255, 255, 255);
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .movies-container{
+        width: 100%;
+        position: absolute;
+        margin: 150px 0px;
+        h1{
+            text-align: center;
+            color: #fff;
+        }
+        .movies{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px 0px;
+            .card{
+                background-color: rgba(255, 255, 255, 0.63);
+                margin: 20px 10px;
+                border-radius: 10px;
+                width: 200px;
+                text-align: center;
+                @include mobile{
+                    width: 160px;
+                    margin: 20px 5px;
+                }
+                @include mobile_two{
+                    width: 150px;
+                }
+                .info{
+                    padding: 15px 15px;
+                    line-height: 40px;
+                    img{
+                        width: 130px;
+                        border-radius: 10px;
+                        @include mobile{
+                            width: 100px;
+                        }
+                    }
+                    h2{
+                        font-size: 17px;
+                        color: #fff;
+                        @include mobile_two{
+                            font-size: 15px;
+                        }
+                    }
+                    button{
+                        padding: 5px 15px;
+                        cursor: pointer;
+                        background-color: #fff;
+                        border: 1px solid rgb(255, 255, 255);
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .anasayfa-contact{
+        position: absolute;
+        width: 100%;
+        margin: 2980px 0px;
+        @include pc_two{
+            margin: 3100px 0px;
+        }
+        @include tablet_two{
+            margin: 3650px 0px;
+        }
+        @include tablet{
+            margin: 3600px 0px;
+        }
+        @include mobile{
+            margin: 1830px 0px;
+        }
+        .contact{
+            padding: 50px 0px;
+            display: flex;
+            justify-content: center;
+            span{
+                margin: 0px 20px;
+                a{
+                    color: #fff;
+                    i{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .movies-page-contact{
+        position: absolute;
+        width: 100%;
+        margin: 100px 0px;
+        @include pc_two{
+            margin: 100px 0px;
+        }
+        @include tablet_two{
+            margin: 100px 0px;
+        }
+        @include tablet{
+            margin: 100px 0px;
+        }
+        @include mobile{
+            margin: 100px 0px;
+        }
+        .contact{
+            padding: 50px 0px;
+            display: flex;
+            justify-content: center;
+            span{
+                margin: 0px 20px;
+                a{
+                    color: #fff;
+                    i{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
